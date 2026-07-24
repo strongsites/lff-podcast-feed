@@ -1,0 +1,37 @@
+name: Crawl and deploy feed
+
+on:
+  schedule:
+    # Weekly, Monday 06:00 UTC. The site's listing page only shows the current
+    # ~7-day week, so this must run at least that often to not miss episodes.
+    - cron: "0 6 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm install
+
+      - run: npm run crawl
+
+      - name: Commit and push feed if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain data/episodes.json docs/feed.xml)" ]; then
+            git add data/episodes.json docs/feed.xml
+            git commit -m "Update feed $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          else
+            echo "No changes to deploy."
+          fi
