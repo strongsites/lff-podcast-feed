@@ -1,61 +1,69 @@
 # Lectio for Families — private podcast feed
 
 Scrapes 24-7 Prayer's [Lectio for Families](https://www.24-7prayer.com/lectioforfamilies/pray/)
-daily devotional pages and generates a private podcast RSS feed (`public/feed.xml`).
+daily devotional pages and generates a podcast RSS feed (`docs/feed.xml`), hosted live at:
 
-The feed links directly to 24-7 Prayer's own audio files on `downloads.24-7prayer.com` —
-nothing is re-hosted or re-encoded, so `public/feed.xml` is the only file that needs hosting.
+**https://strongsites.github.io/lff-podcast-feed/feed.xml**
+
+Add that URL to any podcast app to subscribe. The repo is public (required for free GitHub
+Pages), but the feed itself just contains links to 24-7 Prayer's own public audio files —
+nothing sensitive is exposed. Privacy comes from the URL being unlisted, not from secrecy of
+the repo.
 
 ## How it works
 
 - `https://www.24-7prayer.com/lectioforfamilies/pray/` only lists the **current week's**
-  ~7 devotionals, so `npm run crawl` needs to run at least weekly to catch each day
-  before it scrolls off that page.
+  ~7 devotionals, so the crawl needs to run at least weekly to catch each day before it
+  scrolls off that page.
 - For every episode URL not already in `data/episodes.json`, it scrapes the episode page for
   title, description, publish date, and the real audio URL (which is set via an inline
   `<script>` on the page, not the template's placeholder `src`).
-- `data/episodes.json` is the permanent store — episodes accumulate here across runs,
-  so old ones keep showing up in the feed even after they scroll off the site's listing page.
-- `public/feed.xml` is regenerated from that store on every run.
+- `data/episodes.json` is the permanent store — episodes accumulate here across runs, so old
+  ones keep showing up in the feed even after they scroll off the site's listing page.
+- `docs/feed.xml` is regenerated from that store on every run and served by GitHub Pages
+  (Pages is configured to serve from `main:/docs`).
 
-## Setup
+## Manual usage
 
 ```bash
 npm install
-npm run crawl   # scrapes + writes public/feed.xml
-npm run serve   # serves public/feed.xml at http://localhost:8787/feed.xml
+npm run crawl   # scrapes + writes docs/feed.xml locally
+npm run serve   # serves docs/feed.xml at http://localhost:8787/feed.xml for local testing
 ```
 
-Point a podcast app at `http://localhost:8787/feed.xml` to test locally.
+## Weekly auto-crawl + auto-deploy (already set up on this machine)
 
-## Weekly auto-crawl (macOS launchd)
+`scripts/crawl-and-deploy.sh` runs the crawl, then commits and pushes `docs/feed.xml` +
+`data/episodes.json` to GitHub if anything changed — which is what actually updates the
+live Pages URL.
+
+A macOS `launchd` job (`~/Library/LaunchAgents/com.lff-podcast-feed.crawl.plist`) runs that
+script every Monday at 6am, and once immediately whenever it's loaded. Logs go to
+`logs/crawl.log`.
 
 ```bash
+# reinstall on a different machine, or after editing the plist:
 mkdir -p logs
-sed -e "s|__PROJECT_DIR__|$(pwd)|g" -e "s|__NODE_PATH__|$(which node)|g" \
+NODE_BIN_DIR=$(dirname "$(which node)")
+sed -e "s|__PROJECT_DIR__|$(pwd)|g" -e "s|__NODE_BIN_DIR__|$NODE_BIN_DIR|g" \
   com.lff-podcast-feed.crawl.plist > ~/Library/LaunchAgents/com.lff-podcast-feed.crawl.plist
 launchctl load ~/Library/LaunchAgents/com.lff-podcast-feed.crawl.plist
 ```
 
-This runs `npm run crawl`'s underlying script every Monday at 6am (and once immediately
-on load). Logs go to `logs/crawl.log`. To stop it:
+To stop it:
 
 ```bash
 launchctl unload ~/Library/LaunchAgents/com.lff-podcast-feed.crawl.plist
 ```
 
-## Hosting the feed for real podcast apps
+**Caveat:** this only runs while the Mac is on and awake at the scheduled time (standard
+`launchd` limitation) — a missed week means any devotional that scrolled off the site's
+listing before being scraped is gone for good, since there's no deeper archive to backfill
+from.
 
-`public/feed.xml` needs to be reachable over HTTPS from wherever your podcast app lives.
-Since the feed only contains links (not audio), any static file host works, e.g.:
-
-- Rsync/copy `public/feed.xml` to a personal web server or NAS after each crawl.
-- Or serve the `public/` directory with any static hosting you already have (Cloudflare
-  Pages, Netlify, GitHub Pages, an S3 bucket, etc.) and update it after each crawl.
-
-Since this is meant to be **private**, avoid hosting it somewhere publicly indexed/guessable —
-an unlisted URL (e.g. a UUID-suffixed path) is enough for personal use; add real auth if the
-host supports it and you want stronger protection.
+Pushing requires `gh` to be authenticated on this machine (`gh auth login` was run once to
+set this up, and `gh auth setup-git` wired it into git's credential helper for
+`https://github.com`).
 
 ## Notes
 
