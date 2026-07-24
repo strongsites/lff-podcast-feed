@@ -1,0 +1,14 @@
+{
+  "name": "lff-podcast-feed",
+  "version": "1.0.0",
+  "description": "Private podcast RSS feed generator for 24-7 Prayer's Lectio for Families devotionals",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "crawl": "node src/crawl.js",
+    "serve": "node src/serve.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  }
+}
