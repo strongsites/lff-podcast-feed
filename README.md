@@ -23,7 +23,22 @@ the repo.
 - `docs/feed.xml` is regenerated from that store on every run and served by GitHub Pages
   (Pages is configured to serve from `main:/docs`).
 
-## Manual usage
+## Automatic weekly crawl (runs entirely on GitHub, no machine required)
+
+[`.github/workflows/crawl.yml`](.github/workflows/crawl.yml) runs every Monday at 06:00 UTC
+on GitHub's own runners: it checks out the repo, runs the crawl, and commits + pushes
+`docs/feed.xml` and `data/episodes.json` back to `main` if anything changed. That push is
+what triggers GitHub Pages to redeploy the live URL. It also supports manual runs:
+
+```bash
+gh workflow run crawl.yml     # trigger a run on demand
+gh run list --workflow=crawl.yml   # check recent run status
+```
+
+This requires the repo's default `GITHUB_TOKEN` to have write access (already configured
+via `Settings → Actions → General → Workflow permissions → Read and write permissions`).
+
+## Manual / local usage
 
 ```bash
 npm install
@@ -31,41 +46,13 @@ npm run crawl   # scrapes + writes docs/feed.xml locally
 npm run serve   # serves docs/feed.xml at http://localhost:8787/feed.xml for local testing
 ```
 
-## Weekly auto-crawl + auto-deploy (already set up on this machine)
-
-`scripts/crawl-and-deploy.sh` runs the crawl, then commits and pushes `docs/feed.xml` +
-`data/episodes.json` to GitHub if anything changed — which is what actually updates the
-live Pages URL.
-
-A macOS `launchd` job (`~/Library/LaunchAgents/com.lff-podcast-feed.crawl.plist`) runs that
-script every Monday at 6am, and once immediately whenever it's loaded. Logs go to
-`logs/crawl.log`.
-
-```bash
-# reinstall on a different machine, or after editing the plist:
-mkdir -p logs
-NODE_BIN_DIR=$(dirname "$(which node)")
-sed -e "s|__PROJECT_DIR__|$(pwd)|g" -e "s|__NODE_BIN_DIR__|$NODE_BIN_DIR|g" \
-  com.lff-podcast-feed.crawl.plist > ~/Library/LaunchAgents/com.lff-podcast-feed.crawl.plist
-launchctl load ~/Library/LaunchAgents/com.lff-podcast-feed.crawl.plist
-```
-
-To stop it:
-
-```bash
-launchctl unload ~/Library/LaunchAgents/com.lff-podcast-feed.crawl.plist
-```
-
-**Caveat:** this only runs while the Mac is on and awake at the scheduled time (standard
-`launchd` limitation) — a missed week means any devotional that scrolled off the site's
-listing before being scraped is gone for good, since there's no deeper archive to backfill
-from.
-
-Pushing requires `gh` to be authenticated on this machine (`gh auth login` was run once to
-set this up, and `gh auth setup-git` wired it into git's credential helper for
-`https://github.com`).
+`scripts/crawl-and-deploy.sh` does the same crawl-then-push as the GitHub Actions job, if you
+ever want to trigger + push a run from your own machine instead of waiting for the schedule
+or using `gh workflow run`.
 
 ## Notes
 
 - This is an unofficial mirror for personal use — not affiliated with 24-7 Prayer.
 - If 24-7 Prayer restructures their site/markup, `src/scrape.js` selectors will need updating.
+- If a scheduled run is ever missed, any devotional that scrolled off the site's listing
+  before being scraped is gone for good — there's no deeper archive to backfill from.
