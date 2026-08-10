@@ -5,7 +5,7 @@
     <link>https://www.24-7prayer.com/lectioforfamilies/pray/</link>
     <description>Unofficial private podcast feed mirroring 24-7 Prayer&apos;s Lectio for Families daily devotional audio. Not affiliated with 24-7 Prayer.</description>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 03 Aug 2026 09:26:38 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 07:14:19 +0000</lastBuildDate>
     <itunes:author>24-7 Prayer (unofficial mirror)</itunes:author>
     <itunes:explicit>false</itunes:explicit>
     <itunes:image href="https://www.24-7prayer.com/wp-content/uploads/2024/05/lff_image.jpg" />
@@ -15,6 +15,45 @@
       <link>https://www.24-7prayer.com/lectioforfamilies/pray/</link>
     </image>
     <itunes:category text="Religion &amp; Spirituality" />
+
+    <item>
+      <title>Do Good</title>
+      <link>https://www.24-7prayer.com/lff-devotional/do-good/</link>
+      <guid isPermaLink="true">https://www.24-7prayer.com/lff-devotional/do-good/</guid>
+      <pubDate>Fri, 31 Jul 2026 12:26:01 +0000</pubDate>
+      <description>Welcome to Lectio for Families. It’s the second week of our ‘Being Good Friends’ series, and this week we’re continuing to focus on what the Bible says about how we should treat each other. Each day we will simply pray (P.R.A.Y.) together.P: PAUSING to be still.R: REJOICING with a Memory Verse and REFLECTING on some […]</description>
+      <enclosure url="https://downloads.24-7prayer.com/Lectio%20for%20Families/Audio/2024-08-August/Week-19-Day-03-Joy.mp3" length="9890398" type="audio/mpeg" />
+      <itunes:title>Do Good</itunes:title>
+      <itunes:summary>Welcome to Lectio for Families. It’s the second week of our ‘Being Good Friends’ series, and this week we’re continuing to focus on what the Bible says about how we should treat each other. Each day we will simply pray (P.R.A.Y.) together.P: PAUSING to be still.R: REJOICING with a Memory Verse and REFLECTING on some […]</itunes:summary>
+      <itunes:image href="https://www.24-7prayer.com/wp-content/uploads/2024/05/lff_image.jpg" />
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+
+    <item>
+      <title>Good Gifts</title>
+      <link>https://www.24-7prayer.com/lff-devotional/good-gifts/</link>
+      <guid isPermaLink="true">https://www.24-7prayer.com/lff-devotional/good-gifts/</guid>
+      <pubDate>Fri, 31 Jul 2026 12:21:41 +0000</pubDate>
+      <description>Welcome to Lectio for Families. It’s the second week of our ‘Being Good Friends’ series, and this week we’re continuing to focus on what the Bible says about how we should treat each other. Each day we will simply pray (P.R.A.Y.) together.P: PAUSING to be still.R: REJOICING with a Memory Verse and REFLECTING on some […]</description>
+      <enclosure url="https://downloads.24-7prayer.com/Lectio%20for%20Families/Audio/2024-08-August/Week-19-Day-02-Joy.mp3" length="9848602" type="audio/mpeg" />
+      <itunes:title>Good Gifts</itunes:title>
+      <itunes:summary>Welcome to Lectio for Families. It’s the second week of our ‘Being Good Friends’ series, and this week we’re continuing to focus on what the Bible says about how we should treat each other. Each day we will simply pray (P.R.A.Y.) together.P: PAUSING to be still.R: REJOICING with a Memory Verse and REFLECTING on some […]</itunes:summary>
+      <itunes:image href="https://www.24-7prayer.com/wp-content/uploads/2024/05/lff_image.jpg" />
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+
+    <item>
+      <title>Show Love</title>
+      <link>https://www.24-7prayer.com/lff-devotional/show-love/</link>
+      <guid isPermaLink="true">https://www.24-7prayer.com/lff-devotional/show-love/</guid>
+      <pubDate>Fri, 31 Jul 2026 12:15:55 +0000</pubDate>
+      <description>Welcome to Lectio for Families. It’s the second week of our ‘Being Good Friends’ series, and this week we’re continuing to focus on what the Bible says about how we should treat each other. Each day we will simply pray (P.R.A.Y.) together.P: PAUSING to be still.R: REJOICING with a Memory Verse and REFLECTING on some […]</description>
+      <enclosure url="https://downloads.24-7prayer.com/Lectio%20for%20Families/Audio/2024-08-August/Week-19-Day-01-Joy.mp3" length="9965108" type="audio/mpeg" />
+      <itunes:title>Show Love</itunes:title>
+      <itunes:summary>Welcome to Lectio for Families. It’s the second week of our ‘Being Good Friends’ series, and this week we’re continuing to focus on what the Bible says about how we should treat each other. Each day we will simply pray (P.R.A.Y.) together.P: PAUSING to be still.R: REJOICING with a Memory Verse and REFLECTING on some […]</itunes:summary>
+      <itunes:image href="https://www.24-7prayer.com/wp-content/uploads/2024/05/lff_image.jpg" />
+      <itunes:explicit>false</itunes:explicit>
+    </item>
 
     <item>
       <title>Love One Another, Sabbath</title>

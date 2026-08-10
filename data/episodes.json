@@ -208,5 +208,35 @@
     "audioBytes": 9418104,
     "audioType": "audio/mpeg",
     "pubDate": "2026-07-31T07:49:02.000Z"
+  },
+  "https://www.24-7prayer.com/lff-devotional/show-love/": {
+    "url": "https://www.24-7prayer.com/lff-devotional/show-love/",
+    "title": "Show Love",
+    "description": "Welcome to Lectio for Families. It’s the second week of our ‘Being Good Friends’ series, and this week we’re continuing to focus on what the Bible says about how we should treat each other. Each day we will simply pray (P.R.A.Y.) together.P: PAUSING to be still.R: REJOICING with a Memory Verse and REFLECTING on some […]",
+    "image": "https://www.24-7prayer.com/wp-content/uploads/2024/05/lff_image.jpg",
+    "audioUrl": "https://downloads.24-7prayer.com/Lectio%20for%20Families/Audio/2024-08-August/Week-19-Day-01-Joy.mp3",
+    "audioBytes": 9965108,
+    "audioType": "audio/mpeg",
+    "pubDate": "2026-07-31T12:15:55.000Z"
+  },
+  "https://www.24-7prayer.com/lff-devotional/good-gifts/": {
+    "url": "https://www.24-7prayer.com/lff-devotional/good-gifts/",
+    "title": "Good Gifts",
+    "description": "Welcome to Lectio for Families. It’s the second week of our ‘Being Good Friends’ series, and this week we’re continuing to focus on what the Bible says about how we should treat each other. Each day we will simply pray (P.R.A.Y.) together.P: PAUSING to be still.R: REJOICING with a Memory Verse and REFLECTING on some […]",
+    "image": "https://www.24-7prayer.com/wp-content/uploads/2024/05/lff_image.jpg",
+    "audioUrl": "https://downloads.24-7prayer.com/Lectio%20for%20Families/Audio/2024-08-August/Week-19-Day-02-Joy.mp3",
+    "audioBytes": 9848602,
+    "audioType": "audio/mpeg",
+    "pubDate": "2026-07-31T12:21:41.000Z"
+  },
+  "https://www.24-7prayer.com/lff-devotional/do-good/": {
+    "url": "https://www.24-7prayer.com/lff-devotional/do-good/",
+    "title": "Do Good",
+    "description": "Welcome to Lectio for Families. It’s the second week of our ‘Being Good Friends’ series, and this week we’re continuing to focus on what the Bible says about how we should treat each other. Each day we will simply pray (P.R.A.Y.) together.P: PAUSING to be still.R: REJOICING with a Memory Verse and REFLECTING on some […]",
+    "image": "https://www.24-7prayer.com/wp-content/uploads/2024/05/lff_image.jpg",
+    "audioUrl": "https://downloads.24-7prayer.com/Lectio%20for%20Families/Audio/2024-08-August/Week-19-Day-03-Joy.mp3",
+    "audioBytes": 9890398,
+    "audioType": "audio/mpeg",
+    "pubDate": "2026-07-31T12:26:01.000Z"
   }
 }
