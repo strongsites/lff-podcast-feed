@@ -5,7 +5,7 @@
     <link>https://www.24-7prayer.com/lectioforfamilies/pray/</link>
     <description>Unofficial private podcast feed mirroring 24-7 Prayer&apos;s Lectio for Families daily devotional audio. Not affiliated with 24-7 Prayer.</description>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 10 Aug 2026 07:14:19 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 06:36:10 +0000</lastBuildDate>
     <itunes:author>24-7 Prayer (unofficial mirror)</itunes:author>
     <itunes:explicit>false</itunes:explicit>
     <itunes:image href="https://www.24-7prayer.com/wp-content/uploads/2024/05/lff_image.jpg" />
@@ -15,6 +15,45 @@
       <link>https://www.24-7prayer.com/lectioforfamilies/pray/</link>
     </image>
     <itunes:category text="Religion &amp; Spirituality" />
+
+    <item>
+      <title>Hero Day - Rosa Parks</title>
+      <link>https://www.24-7prayer.com/lff-devotional/hero-day-rosa-parks/</link>
+      <guid isPermaLink="true">https://www.24-7prayer.com/lff-devotional/hero-day-rosa-parks/</guid>
+      <pubDate>Fri, 14 Aug 2026 23:25:51 +0000</pubDate>
+      <description>Welcome to Lectio For Families. Today is a Hero Day, and so we’re taking a break from our usual pattern to pray a little differently. On Hero Days we pause to celebrate and learn from the life of someone who followed Jesus in a really inspiring way. Today we are thanking God for the extraordinary […]</description>
+      <enclosure url="https://downloads.24-7prayer.com/Lectio%20for%20Families/Audio/2024-08-August/Week-20-Day-03-Phil.mp3" length="10403443" type="audio/mpeg" />
+      <itunes:title>Hero Day - Rosa Parks</itunes:title>
+      <itunes:summary>Welcome to Lectio For Families. Today is a Hero Day, and so we’re taking a break from our usual pattern to pray a little differently. On Hero Days we pause to celebrate and learn from the life of someone who followed Jesus in a really inspiring way. Today we are thanking God for the extraordinary […]</itunes:summary>
+      <itunes:image href="https://www.24-7prayer.com/wp-content/uploads/2024/05/lff_image.jpg" />
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+
+    <item>
+      <title>Being Friends Through Good And Bad</title>
+      <link>https://www.24-7prayer.com/lff-devotional/being-friends-through-good-and-bad/</link>
+      <guid isPermaLink="true">https://www.24-7prayer.com/lff-devotional/being-friends-through-good-and-bad/</guid>
+      <pubDate>Fri, 14 Aug 2026 23:18:20 +0000</pubDate>
+      <description>Welcome to Lectio for Families. We are continuing our ‘Being Good Friends’ series, and this week we’re looking at a really good example of friendship in the Bible, between David and Jonathan. Each day we will simply pray (P.R.A.Y.) together.P: PAUSING to be still.R: REJOICING with a Memory Verse and REFLECTING on some verses from […]</description>
+      <enclosure url="https://downloads.24-7prayer.com/Lectio%20for%20Families/Audio/2024-08-August/Week-20-Day-02-Phil.mp3" length="9866888" type="audio/mpeg" />
+      <itunes:title>Being Friends Through Good And Bad</itunes:title>
+      <itunes:summary>Welcome to Lectio for Families. We are continuing our ‘Being Good Friends’ series, and this week we’re looking at a really good example of friendship in the Bible, between David and Jonathan. Each day we will simply pray (P.R.A.Y.) together.P: PAUSING to be still.R: REJOICING with a Memory Verse and REFLECTING on some verses from […]</itunes:summary>
+      <itunes:image href="https://www.24-7prayer.com/wp-content/uploads/2024/05/lff_image.jpg" />
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+
+    <item>
+      <title>An Unlikely Friendship</title>
+      <link>https://www.24-7prayer.com/lff-devotional/an-unlikely-friendship/</link>
+      <guid isPermaLink="true">https://www.24-7prayer.com/lff-devotional/an-unlikely-friendship/</guid>
+      <pubDate>Fri, 14 Aug 2026 23:14:16 +0000</pubDate>
+      <description>Welcome to Lectio for Families. We are continuing our ‘Being Good Friends’ series, and this week we’re looking at a really good example of friendship in the Bible, between David and Jonathan. Each day we will simply pray (P.R.A.Y.) together.P: PAUSING to be still.R: REJOICING with a Memory Verse and REFLECTING on some verses from […]</description>
+      <enclosure url="https://downloads.24-7prayer.com/Lectio%20for%20Families/Audio/2024-08-August/Week-20-Day-01-Phil.mp3" length="10253500" type="audio/mpeg" />
+      <itunes:title>An Unlikely Friendship</itunes:title>
+      <itunes:summary>Welcome to Lectio for Families. We are continuing our ‘Being Good Friends’ series, and this week we’re looking at a really good example of friendship in the Bible, between David and Jonathan. Each day we will simply pray (P.R.A.Y.) together.P: PAUSING to be still.R: REJOICING with a Memory Verse and REFLECTING on some verses from […]</itunes:summary>
+      <itunes:image href="https://www.24-7prayer.com/wp-content/uploads/2024/05/lff_image.jpg" />
+      <itunes:explicit>false</itunes:explicit>
+    </item>
 
     <item>
       <title>Do Good</title>
